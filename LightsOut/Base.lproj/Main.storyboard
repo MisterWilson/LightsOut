@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LightsOut" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +17,58 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saq-IA-Baq">
+                                <rect key="frame" x="529" y="562" width="35" height="30"/>
+                                <state key="normal" title="NEW">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-mH-PjF" customClass="LightsOutView" customModule="LightsOut" customModuleProvider="target">
+                                <rect key="frame" x="150" y="57" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="1bh-ef-60I"/>
+                                    <constraint firstAttribute="width" secondItem="WCy-mH-PjF" secondAttribute="height" multiplier="1:1" id="MGo-1G-Fu3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="vhO-tJ-iZo"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHTS OUT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwI-6n-wGY">
+                                <rect key="frame" x="250" y="28" width="101" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FnZ-OC-PYi"/>
+                                    <constraint firstAttribute="width" constant="101" id="bot-Kb-x61"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT3-Ef-G8T">
+                                <rect key="frame" x="36" y="562" width="45" height="30"/>
+                                <state key="normal" title="UNDO">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="saq-IA-Baq" secondAttribute="bottom" constant="8" symbolic="YES" id="0Af-yA-3nd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCy-mH-PjF" secondAttribute="trailing" id="48f-H7-lvi"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GT3-Ef-G8T" secondAttribute="bottom" constant="8" symbolic="YES" id="8ff-X4-rAo"/>
+                            <constraint firstAttribute="centerX" secondItem="WCy-mH-PjF" secondAttribute="centerX" id="8m2-zR-Exa"/>
+                            <constraint firstItem="WCy-mH-PjF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="S1i-Ah-Xnr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="saq-IA-Baq" secondAttribute="trailing" constant="20" id="SEr-wS-HTF"/>
+                            <constraint firstItem="GT3-Ef-G8T" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="aYn-HN-zxn"/>
+                            <constraint firstItem="WCy-mH-PjF" firstAttribute="top" secondItem="WwI-6n-wGY" secondAttribute="bottom" constant="8" symbolic="YES" id="dLL-GG-EQ3"/>
+                            <constraint firstItem="WwI-6n-wGY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="sK5-Aa-d4Z"/>
+                            <constraint firstAttribute="centerX" secondItem="WwI-6n-wGY" secondAttribute="centerX" id="v3t-Ml-ZIK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="48f-H7-lvi"/>
+                                <exclude reference="S1i-Ah-Xnr"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

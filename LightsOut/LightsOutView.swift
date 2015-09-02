@@ -9,6 +9,16 @@
 import UIKit
 
 class LightsOutView: UIView {
+    
+    var squares = [Bool](count:25, repeatedValue:false)
+    
+    func squareAt(row r: Int, column c: Int) -> Bool {
+        return squares[r*5 + c]
+    }
+    
+    func setSquareAt(row r: Int, column c: Int, value v: Bool) {
+        squares[r*5 + c] = v
+    }
 
 
     // Only override drawRect: if you perform custom drawing.
@@ -24,13 +34,20 @@ class LightsOutView: UIView {
         
         let litColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
         let gridColor = UIColor(white: 0, alpha: 1)
+        let unlitColor = UIColor.darkGrayColor()
         
-        for row in 0..<5 {
-            for column in 0..<5 {
-                var path = UIBezierPath(ovalInRect: CGRectMake(CGFloat(column)*squareWidth, CGFloat(row)*squareHeight, squareWidth, squareHeight))
+        
+        for rowNum in 0..<5 {
+            for colNum in 0..<5 {
+                let path = UIBezierPath(roundedRect: CGRectMake(CGFloat(colNum)*squareWidth, CGFloat(rowNum)*squareHeight, squareWidth, squareHeight), cornerRadius: CGFloat(10))
                 gridColor.set()
                 path.stroke()
-                litColor.set()
+                if squareAt(row:rowNum, column:colNum) == true {
+                 litColor.set()
+                } else {
+                 unlitColor.set()
+                }
+                
                 path.fill()
             }
         }

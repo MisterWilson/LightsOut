@@ -14,6 +14,7 @@
 		8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B71B855BE00016739B /* LaunchScreen.xib */; };
 		8E4CD5C51B855BE00016739B /* LightsOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5C41B855BE00016739B /* LightsOutTests.swift */; };
 		8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */; };
+		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8E4CD5C31B855BE00016739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4CD5C41B855BE00016739B /* LightsOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutTests.swift; sourceTree = "<group>"; };
 		8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
+		8E8105271BCDE80A00319B89 /* LightsOutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				8E4CD5AE1B855BE00016739B /* AppDelegate.swift */,
 				8E4CD5B01B855BE00016739B /* ViewController.swift */,
 				8E4CD5B21B855BE00016739B /* Main.storyboard */,
+				8E8105271BCDE80A00319B89 /* LightsOutGame.swift */,
 				8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */,
 				8E4CD5B51B855BE00016739B /* Images.xcassets */,
 				8E4CD5B71B855BE00016739B /* LaunchScreen.xib */,
@@ -219,6 +222,7 @@
 				8E4CD5B11B855BE00016739B /* ViewController.swift in Sources */,
 				8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */,
 				8E4CD5AF1B855BE00016739B /* AppDelegate.swift in Sources */,
+				8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

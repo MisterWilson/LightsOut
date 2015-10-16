@@ -19,17 +19,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saq-IA-Baq">
-                                <rect key="frame" x="529" y="562" width="35" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="saq-IA-Baq">
+                                <rect key="frame" x="526" y="562" width="34" height="30"/>
                                 <animations/>
                                 <state key="normal" title="NEW">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="newGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dcb-oy-yD9"/>
+                                    <action selector="newGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Ar-Qd-hut"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-mH-PjF" customClass="LightsOutView" customModule="LightsOut" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-mH-PjF" customClass="LightsOutView" customModule="LightsOut" customModuleProvider="target">
                                 <rect key="frame" x="150" y="57" width="300" height="300"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,12 +50,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT3-Ef-G8T">
-                                <rect key="frame" x="36" y="562" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT3-Ef-G8T">
+                                <rect key="frame" x="40" y="562" width="44" height="30"/>
                                 <animations/>
                                 <state key="normal" title="UNDO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="undo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iEa-ct-rSz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -69,6 +72,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="saq-IA-Baq" secondAttribute="trailing" constant="20" id="SEr-wS-HTF"/>
                             <constraint firstItem="GT3-Ef-G8T" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="aYn-HN-zxn"/>
                             <constraint firstItem="WCy-mH-PjF" firstAttribute="top" secondItem="WwI-6n-wGY" secondAttribute="bottom" constant="8" symbolic="YES" id="dLL-GG-EQ3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WCy-mH-PjF" secondAttribute="bottom" constant="243" id="pHe-j7-Zuw"/>
                             <constraint firstItem="WwI-6n-wGY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="sK5-Aa-d4Z"/>
                             <constraint firstAttribute="centerX" secondItem="WwI-6n-wGY" secondAttribute="centerX" id="v3t-Ml-ZIK"/>
                         </constraints>
@@ -81,6 +85,7 @@
                     </view>
                     <connections>
                         <outlet property="lightsOutView" destination="WCy-mH-PjF" id="R4w-Y9-A7q"/>
+                        <outlet property="undoButton" destination="GT3-Ef-G8T" id="qYX-f0-sV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

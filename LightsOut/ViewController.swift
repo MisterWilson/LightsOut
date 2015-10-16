@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var game = LightsOutGame()
 
     @IBOutlet weak var lightsOutView: LightsOutView!
     
+    @IBOutlet weak var undoButton: UIButton!
+
     @IBAction func newGame(sender: AnyObject) {
-        lightsOutView.newGame()
-        
+        game.newGame()
+        lightsOutView.update(game)
     }
+    
+    @IBAction func undo(sender: AnyObject) {
+        game.undo()
+        lightsOutView.update(game)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        game.newGame()
     }
 
     override func didReceiveMemoryWarning() {

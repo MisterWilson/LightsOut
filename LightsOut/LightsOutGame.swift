@@ -41,7 +41,6 @@ class LightsOutGame: NSObject {
         if c < boardSize-1 {
             toggleSquareAt(row: r, column: c+1)
         }
-        
     }
     
     func newGame() {
@@ -77,5 +76,10 @@ class LightsOutGame: NSObject {
             let move = moves.removeLast()
             self.toggleCross(row: move.row, column: move.column)
         }
+    }
+    
+    func makeMove(row r: Int, column c: Int) {
+        toggleCross(row: r, column: c)
+        moves.append((r, c))
     }
 }

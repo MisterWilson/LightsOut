@@ -18,17 +18,18 @@ class ViewController: UIViewController {
 
     @IBAction func newGame(sender: AnyObject) {
         game.newGame()
-        lightsOutView.update(game)
+        lightsOutView.setNeedsDisplay()
     }
     
     @IBAction func undo(sender: AnyObject) {
         game.undo()
-        lightsOutView.update(game)
+        lightsOutView.setNeedsDisplay()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        lightsOutView.game = game
         game.newGame()
     }
 
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func toggleCross(row: Int , col: Int) {
+        game.toggleCross(row: row, column: col)
+    }
 
 }
 

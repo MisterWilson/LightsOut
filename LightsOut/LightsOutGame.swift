@@ -10,9 +10,16 @@ import UIKit
 
 class LightsOutGame: NSObject {
     
-    var moves: [(row:Int, column:Int)] = []
-    
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
+    
+    func didWinGame() -> Bool {
+        for s in squares {
+            if s {
+                return false
+            }
+        }
+        return true
+    }
     
     func squareAt(row r: Int, column c: Int) -> Bool {
         return squares[r*boardSize + c]
@@ -58,28 +65,24 @@ class LightsOutGame: NSObject {
                 listOfSquares.append((rowNum, colNum))
             }
         }
-        
+
         // set random light pattern
-        for _ in 0..<6 {
+        
+        // CHANGE ME BACK TO 6
+        
+        for _ in 0..<1 {
             let randomElement = random() % listOfSquares.count
             let (row, col) = listOfSquares[randomElement]
             listOfSquares.removeAtIndex(randomElement)
             toggleCross(row: row, column: col)
         }
-        
-        //clears moves array
-        moves.removeAll()
-    }
-    
-    func undo() {
-        if moves.count > 0 {
-            let move = moves.removeLast()
-            self.toggleCross(row: move.row, column: move.column)
-        }
     }
     
     func makeMove(row r: Int, column c: Int) {
         toggleCross(row: r, column: c)
-        moves.append((r, c))
+        
+        if self.didWinGame() {
+            NSNotificationCenter.defaultCenter().postNotificationName("didWinGame", object: nil)
+        }
     }
 }

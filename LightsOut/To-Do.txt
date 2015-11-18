@@ -1,0 +1,9 @@
+
+// Create/implement winning state
+// Add new game animation
+// GameCenter Integration / Rankings
+// Consider staged levels / preconfigured boards
+// Training
+// Multi-device support (++ handoff)
+Add Timer & options toggle
+Create light show

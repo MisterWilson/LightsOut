@@ -13,6 +13,8 @@ let boardSize = 5
 class LightsOutView: UIView {
     
     var game: LightsOutGame?
+    var lightShowStarted = false
+    var lightShowCount = 10
     
     func placeTouch(x: CGFloat, _ y: CGFloat) -> (row: Int, column: Int) {
         let bounds = self.bounds
@@ -45,6 +47,9 @@ class LightsOutView: UIView {
     }
 
 
+    func randomCGFloat() -> CGFloat {
+        return CGFloat(random() % 2)
+    }
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
@@ -67,10 +72,16 @@ class LightsOutView: UIView {
                     let path = UIBezierPath(roundedRect: CGRectMake(CGFloat(colNum)*squareWidth, CGFloat(rowNum)*squareHeight, squareWidth, squareHeight), cornerRadius: CGFloat(10))
                     gridColor.set()
                     path.stroke()
-                    if g.squareAt(row:rowNum, column:colNum) == true {
-                     litColor.set()
+                    
+                    if lightShowStarted {
+                        let randomColor = UIColor(red: randomCGFloat(), green: randomCGFloat(), blue: randomCGFloat(), alpha: 1)
+                        randomColor.set()
                     } else {
-                     unlitColor.set()
+                        if g.squareAt(row:rowNum, column:colNum) == true {
+                            litColor.set()
+                        } else {
+                            unlitColor.set()
+                        }
                     }
                     
                     path.fill()
@@ -79,13 +90,18 @@ class LightsOutView: UIView {
         }
     }
 
-//    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-//        <#code#>
-//    }
+    func startLightShow() {
+        lightShowStarted = true
+        lightShowCount = 10
+        self.setNeedsDisplay()
+        NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "changeColors", userInfo: nil, repeats: false)
+    }
+    
+    func changeColors() {
+        self.setNeedsDisplay()
+        lightShowCount--
+        if lightShowCount > 0 {
+            NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "changeColors", userInfo: nil, repeats: false)
+        }
+    }
 }
-
-//        var path = UIBezierPath(ovalInRect: CGRectMake(0, 0, 50, 50))
-////        var box = UIBezierPath(roundedRect: CGRectMake(100, 100, squareWidth, squareHeight), cornerRadius: 10)
-////        path.stroke()
-////        box.stroke()
-//    }

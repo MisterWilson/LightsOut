@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -26,7 +25,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="newGame:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1Ar-Qd-hut"/>
+                                    <action selector="newGameClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bb4-10-xIf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCy-mH-PjF" customClass="LightsOutView" customModule="LightsOut" customModuleProvider="target">
@@ -50,30 +49,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT3-Ef-G8T">
-                                <rect key="frame" x="40" y="562" width="44" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJQ-d9-j6g">
+                                <rect key="frame" x="246" y="365" width="108" height="30"/>
                                 <animations/>
-                                <state key="normal" title="UNDO">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="undo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iEa-ct-rSz"/>
-                                </connections>
-                            </button>
+                                <string key="text">YOU WON!!
+
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="🏆🏆🏆" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ONV-sw-VQD">
+                                <rect key="frame" x="253" y="403" width="96" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="saq-IA-Baq" secondAttribute="bottom" constant="8" symbolic="YES" id="0Af-yA-3nd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WCy-mH-PjF" secondAttribute="trailing" id="48f-H7-lvi"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GT3-Ef-G8T" secondAttribute="bottom" constant="8" symbolic="YES" id="8ff-X4-rAo"/>
                             <constraint firstAttribute="centerX" secondItem="WCy-mH-PjF" secondAttribute="centerX" id="8m2-zR-Exa"/>
+                            <constraint firstItem="gJQ-d9-j6g" firstAttribute="centerX" secondItem="WCy-mH-PjF" secondAttribute="centerX" id="G16-Rb-Csz"/>
+                            <constraint firstItem="ONV-sw-VQD" firstAttribute="centerX" secondItem="WwI-6n-wGY" secondAttribute="centerX" id="Qy0-r8-H3j"/>
                             <constraint firstItem="WCy-mH-PjF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="S1i-Ah-Xnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="saq-IA-Baq" secondAttribute="trailing" constant="20" id="SEr-wS-HTF"/>
-                            <constraint firstItem="GT3-Ef-G8T" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="aYn-HN-zxn"/>
+                            <constraint firstItem="gJQ-d9-j6g" firstAttribute="top" secondItem="WCy-mH-PjF" secondAttribute="bottom" constant="8" symbolic="YES" id="aH3-sa-M8f"/>
                             <constraint firstItem="WCy-mH-PjF" firstAttribute="top" secondItem="WwI-6n-wGY" secondAttribute="bottom" constant="8" symbolic="YES" id="dLL-GG-EQ3"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WCy-mH-PjF" secondAttribute="bottom" constant="243" id="pHe-j7-Zuw"/>
                             <constraint firstItem="WwI-6n-wGY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="sK5-Aa-d4Z"/>
+                            <constraint firstItem="ONV-sw-VQD" firstAttribute="top" secondItem="gJQ-d9-j6g" secondAttribute="bottom" constant="8" symbolic="YES" id="uAM-wB-Edw"/>
                             <constraint firstAttribute="centerX" secondItem="WwI-6n-wGY" secondAttribute="centerX" id="v3t-Ml-ZIK"/>
                         </constraints>
                         <variation key="default">
@@ -85,11 +92,13 @@
                     </view>
                     <connections>
                         <outlet property="lightsOutView" destination="WCy-mH-PjF" id="R4w-Y9-A7q"/>
-                        <outlet property="undoButton" destination="GT3-Ef-G8T" id="qYX-f0-sV5"/>
+                        <outlet property="winningIcon" destination="ONV-sw-VQD" id="n9U-yF-CSD"/>
+                        <outlet property="winningText" destination="gJQ-d9-j6g" id="uOb-PP-5RO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="460" y="334"/>
         </scene>
     </scenes>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1D08261BFC09CF0002322F /* To-Do.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E1D08251BFC09CF0002322F /* To-Do.txt */; };
 		8E4CD5AF1B855BE00016739B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5AE1B855BE00016739B /* AppDelegate.swift */; };
 		8E4CD5B11B855BE00016739B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B01B855BE00016739B /* ViewController.swift */; };
 		8E4CD5B41B855BE00016739B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B21B855BE00016739B /* Main.storyboard */; };
@@ -14,7 +15,7 @@
 		8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B71B855BE00016739B /* LaunchScreen.xib */; };
 		8E4CD5C51B855BE00016739B /* LightsOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5C41B855BE00016739B /* LightsOutTests.swift */; };
 		8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */; };
-		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; settings = {ASSET_TAGS = (); }; };
+		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1D08251BFC09CF0002322F /* To-Do.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "To-Do.txt"; sourceTree = "<group>"; };
 		8E4CD5A91B855BE00016739B /* LightsOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightsOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E4CD5AD1B855BE00016739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4CD5AE1B855BE00016739B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				8E4CD5B51B855BE00016739B /* Images.xcassets */,
 				8E4CD5B71B855BE00016739B /* LaunchScreen.xib */,
 				8E4CD5AC1B855BE00016739B /* Supporting Files */,
+				8E1D08251BFC09CF0002322F /* To-Do.txt */,
 			);
 			path = LightsOut;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Blaine Wilson";
 				TargetAttributes = {
 					8E4CD5A81B855BE00016739B = {
@@ -201,6 +204,7 @@
 			files = (
 				8E4CD5B41B855BE00016739B /* Main.storyboard in Resources */,
 				8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */,
+				8E1D08261BFC09CF0002322F /* To-Do.txt in Resources */,
 				8E4CD5B61B855BE00016739B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +308,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -341,7 +345,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -372,10 +376,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -392,10 +392,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = LightsOutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blowbackdesigns.$(PRODUCT_NAME:rfc1034identifier)";

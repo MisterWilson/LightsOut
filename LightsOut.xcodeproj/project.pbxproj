@@ -42,6 +42,7 @@
 		8E4CD5C41B855BE00016739B /* LightsOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutTests.swift; sourceTree = "<group>"; };
 		8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
 		8E8105271BCDE80A00319B89 /* LightsOutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutGame.swift; sourceTree = "<group>"; };
+		8EBE44271C28E5C6008A4836 /* LightsOut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LightsOut.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		8E4CD5AB1B855BE00016739B /* LightsOut */ = {
 			isa = PBXGroup;
 			children = (
+				8EBE44271C28E5C6008A4836 /* LightsOut.entitlements */,
 				8E4CD5AE1B855BE00016739B /* AppDelegate.swift */,
 				8E4CD5B01B855BE00016739B /* ViewController.swift */,
 				8E4CD5B21B855BE00016739B /* Main.storyboard */,
@@ -171,6 +173,12 @@
 				TargetAttributes = {
 					8E4CD5A81B855BE00016739B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = CNCDUB33GL;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					8E4CD5BD1B855BE00016739B = {
 						CreatedOnToolsVersion = 6.4;
@@ -354,10 +362,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LightsOut/LightsOut.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LightsOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blowbackdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -365,10 +378,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LightsOut/LightsOut.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Blaine Wilson (9U8D5D4846)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Blaine Wilson (9U8D5D4846)";
 				INFOPLIST_FILE = LightsOut/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.blowbackdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

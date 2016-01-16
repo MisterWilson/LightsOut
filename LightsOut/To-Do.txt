@@ -1,9 +1,32 @@
+Record level time
 
-// Create/implement winning state
-// Add new game animation
-// GameCenter Integration / Rankings
-// Consider staged levels / preconfigured boards
-// Training
-// Multi-device support (++ handoff)
-Add Timer & options toggle
-Create light show
+Allow horizontal use
+
+Add "undu" button that resets level.
+
+Needs introduction/explaination of WTF they're doing
+
+Needs a slight pause after completing level before jumping into next
+
+Repeat levels a few times before advancing.
+
+------------------------
+
+Add commonly found/preconfigured levels game type ("bastards")
+
+1v1 Multiplayer
+
+first to clear level gets a point, both players advance to the next round
+
+points scoreboard
+
+Add Handoff between devices
+
+Sync level times above level 10 to gamecenter
+
+In-app purchase
+
+------------------------
+
+
+Fade out slider

@@ -11,7 +11,9 @@ import UIKit
 class LightsOutGame: NSObject {
     
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
-    
+    var level = 1
+    var listOfSquares = [(Int, Int)]()
+
     func didWinGame() -> Bool {
         for s in squares {
             if s {
@@ -50,32 +52,38 @@ class LightsOutGame: NSObject {
         }
     }
     
-    func newGame() {
-        // clear board
+    func clearlistOfSquares () {
         for rowNum in 0..<boardSize {
             for colNum in 0..<boardSize {
                 setSquareAt(row: rowNum, column: colNum, value: false)
             }
         }
         
+    }
+    
+    func newGame() {
+        
+        clearlistOfSquares()
+        
         // choosing random squares to toggle
-        var listOfSquares = [(Int, Int)]()
         for rowNum in 0..<boardSize {
             for colNum in 0..<boardSize {
                 listOfSquares.append((rowNum, colNum))
             }
         }
-
-        // set random light pattern
         
-        // CHANGE ME BACK TO 6
-        
-        for _ in 0..<1 {
+        for _ in 0..<level {
             let randomElement = random() % listOfSquares.count
             let (row, col) = listOfSquares[randomElement]
             listOfSquares.removeAtIndex(randomElement)
             toggleCross(row: row, column: col)
         }
+    }
+    
+    func undoRound() {
+        
+        // FILL ME
+
     }
     
     func makeMove(row r: Int, column c: Int) {

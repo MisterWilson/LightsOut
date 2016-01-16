@@ -20,8 +20,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-FJ-g19">
                                 <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHTS OUT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwI-6n-wGY" userLabel="Lights Out Title">
+                                        <rect key="frame" x="109" y="15" width="101" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="FnZ-OC-PYi"/>
+                                            <constraint firstAttribute="width" constant="101" id="bot-Kb-x61"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.050980392159999999" green="1" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="WwI-6n-wGY" firstAttribute="centerY" secondItem="mrZ-FJ-g19" secondAttribute="centerY" id="9aD-6T-w4K"/>
+                                    <constraint firstItem="WwI-6n-wGY" firstAttribute="centerX" secondItem="mrZ-FJ-g19" secondAttribute="centerX" id="gRb-8a-IZP"/>
                                     <constraint firstAttribute="height" constant="50" id="mV4-W3-5ng"/>
                                 </constraints>
                             </view>
@@ -91,16 +105,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHTS OUT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwI-6n-wGY" userLabel="Lights Out Title">
-                                <rect key="frame" x="109" y="28" width="101" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="FnZ-OC-PYi"/>
-                                    <constraint firstAttribute="width" constant="101" id="bot-Kb-x61"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.050980392159999999" green="1" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-QQ-8ou">
                                 <rect key="frame" x="101" y="480" width="118" height="31"/>
                                 <constraints>
@@ -134,12 +138,9 @@
                             <constraint firstItem="7TF-mq-lxP" firstAttribute="top" secondItem="xSp-QQ-8ou" secondAttribute="bottom" constant="8" id="YH2-cB-cJz"/>
                             <constraint firstItem="WCy-mH-PjF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ZQj-bi-e8e"/>
                             <constraint firstItem="mrZ-FJ-g19" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ata-2E-vPT"/>
-                            <constraint firstItem="WCy-mH-PjF" firstAttribute="top" secondItem="WwI-6n-wGY" secondAttribute="bottom" constant="100" id="dLL-GG-EQ3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7TF-mq-lxP" secondAttribute="trailing" id="ej7-Z6-IZq"/>
                             <constraint firstItem="7TF-mq-lxP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lVz-wM-5I9"/>
                             <constraint firstItem="7TF-mq-lxP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="s4l-3l-mof"/>
-                            <constraint firstItem="WwI-6n-wGY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="sK5-Aa-d4Z"/>
-                            <constraint firstAttribute="centerX" secondItem="WwI-6n-wGY" secondAttribute="centerX" id="v3t-Ml-ZIK"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xSp-QQ-8ou" secondAttribute="leading" id="v7w-9t-VG0"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7TF-mq-lxP" secondAttribute="bottom" id="yM1-pJ-BNG"/>
                         </constraints>
@@ -152,7 +153,6 @@
                                 <exclude reference="OCD-XQ-Fnu"/>
                                 <exclude reference="S1i-Ah-Xnr"/>
                                 <exclude reference="Xjs-lY-3tM"/>
-                                <exclude reference="dLL-GG-EQ3"/>
                                 <exclude reference="v7w-9t-VG0"/>
                                 <exclude reference="GPu-f3-u6R"/>
                                 <exclude reference="VBv-zR-aBH"/>

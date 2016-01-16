@@ -9,17 +9,16 @@
 import UIKit
 
 class LightsOutGame: NSObject {
-    
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
     var level = 1
     var listOfSquares = [(Int, Int)]()
-    var listofSquares2 = [(Int, Int)]()
-
+    var moveList = [(Int, Int)]()
+    
     func didWinGame() -> Bool {
-        for s in squares {
-            if s {
+        for i in squares {
+            if i {
                 return false
-            }
+            } 
         }
         return true
     }
@@ -38,6 +37,7 @@ class LightsOutGame: NSObject {
     
     func toggleCross(row r: Int, column c: Int){
         let currentValueOfSquare = squareAt(row: r, column: c)
+        moveList.append(r, c)
         setSquareAt(row: r, column: c, value: !currentValueOfSquare)
         if r > 0 {
             toggleSquareAt(row: r-1, column: c)
@@ -63,7 +63,6 @@ class LightsOutGame: NSObject {
     }
     
     func newGame() {
-        
         clearlistOfSquares()
         
         // choosing random squares to toggle
@@ -73,18 +72,30 @@ class LightsOutGame: NSObject {
             }
         }
         
+        // toggling squares
         for _ in 0..<level {
             let randomElement = random() % listOfSquares.count
             let (row, col) = listOfSquares[randomElement]
             listOfSquares.removeAtIndex(randomElement)
             toggleCross(row: row, column: col)
         }
+        moveList.removeAll()
+
     }
     
     func undoRound() {
+        var listCount = 0
         
-        // FILL ME
-
+        for _ in moveList {
+            let (r, c) = moveList[listCount]
+            toggleCross(row: r, column: c)
+            
+            if listCount < moveList.count {
+                listCount += 1
+            }
+        }
+        moveList.removeAll()
+        listCount = 0
     }
     
     func makeMove(row r: Int, column c: Int) {

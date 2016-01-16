@@ -13,6 +13,7 @@ class LightsOutGame: NSObject {
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
     var level = 1
     var listOfSquares = [(Int, Int)]()
+    var listofSquares2 = [(Int, Int)]()
 
     func didWinGame() -> Bool {
         for s in squares {

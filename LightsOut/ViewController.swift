@@ -29,7 +29,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showHideSlider(sender: AnyObject) {
-        levelSlider.hidden = !levelSlider.hidden
+        showHideSlide()
+        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "showHideSlide", userInfo: nil, repeats: false)
     }
     
     @IBAction func newGameClick(_: AnyObject) {
@@ -78,6 +79,10 @@ class ViewController: UIViewController {
         game.level = Int(levelFromSlider)
         game.newGame()
         lightsOutView.setNeedsDisplay()
+    }
+    
+    func showHideSlide() {
+        levelSlider.hidden = !levelSlider.hidden
     }
 
 }

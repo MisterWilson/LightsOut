@@ -31,16 +31,21 @@ class ViewController: UIViewController {
     @IBAction func showHideSlider(_: AnyObject) {
 
         if levelSlider.hidden == false {
-            UIView.animateWithDuration(1.0, animations: {
-                self.levelSlider.alpha = self.levelSlider.hidden ? 1.0 : 0.0
-                }, completion: {
-                    (_: Bool) in
-                    self.levelSlider.hidden = !self.levelSlider.hidden
-                    self.levelSlider.alpha = 1.0
-            })
+            fadeOut()
         } else {
             levelSlider.hidden = !levelSlider.hidden
+            NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "fadeOut", userInfo: nil, repeats: false)
         }
+    }
+    
+    func fadeOut() {
+        UIView.animateWithDuration(1.0, animations: {
+            self.levelSlider.alpha = self.levelSlider.hidden ? 1.0 : 0.0
+            }, completion: {
+                (_: Bool) in
+                self.levelSlider.hidden = !self.levelSlider.hidden
+                self.levelSlider.alpha = 1.0
+        })
     }
     
     @IBAction func newGameClick(_: AnyObject) {
@@ -63,10 +68,13 @@ class ViewController: UIViewController {
         lightsOutView.game = game
         let store = NSUserDefaults.standardUserDefaults()
         let level = store.integerForKey("Level")
-        print(level)
-        self.levelSlider.value = Float(level)
+        if level == 0 {
+            self.levelSlider.value = 1.0
+        } else {
+            self.levelSlider.value = Float(level)
+        }
         
-        self.levelButton.setTitle(String(Int(level)), forState: UIControlState.Normal)
+        self.levelButton.setTitle(String(Int(levelSlider.value)), forState: UIControlState.Normal)
         self.resetLevel()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didWinGame", name: "didWinGame", object: nil  )

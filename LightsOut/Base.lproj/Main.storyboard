@@ -124,7 +124,7 @@
                                 </variation>
                             </view>
                             <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="23" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-QQ-8ou">
-                                <rect key="frame" x="101" y="480" width="118" height="31"/>
+                                <rect key="frame" x="101" y="488" width="118" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="4TQ-zO-GdG"/>
                                     <constraint firstAttribute="height" constant="30" id="Gxf-Pv-xEB"/>
@@ -163,6 +163,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="WCy-mH-PjF" secondAttribute="trailing" id="fFN-zd-dsv"/>
                             <constraint firstItem="7TF-mq-lxP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="lVz-wM-5I9"/>
                             <constraint firstItem="WCy-mH-PjF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="m7W-qO-kei"/>
+                            <constraint firstItem="7TF-mq-lxP" firstAttribute="top" secondItem="xSp-QQ-8ou" secondAttribute="bottom" id="mWM-dJ-N0N"/>
                             <constraint firstItem="7TF-mq-lxP" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="s4l-3l-mof"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xSp-QQ-8ou" secondAttribute="leading" id="v7w-9t-VG0"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7TF-mq-lxP" secondAttribute="bottom" id="yM1-pJ-BNG"/>
@@ -185,6 +186,7 @@
                                 <exclude reference="v7w-9t-VG0"/>
                                 <exclude reference="GPu-f3-u6R"/>
                                 <exclude reference="VBv-zR-aBH"/>
+                                <exclude reference="YH2-cB-cJz"/>
                                 <exclude reference="ej7-Z6-IZq"/>
                                 <exclude reference="s4l-3l-mof"/>
                                 <exclude reference="ITS-az-9TM"/>

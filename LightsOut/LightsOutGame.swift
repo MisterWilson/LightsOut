@@ -11,8 +11,8 @@ import UIKit
 class LightsOutGame: NSObject {
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
     var level = 1
-    var listOfSquares = [(Int, Int)]()
-    var moveList = [(Int, Int)]()
+    var originalLayout = [(Int, Int)]()
+
     
     func didWinGame() -> Bool {
         for i in squares {
@@ -37,7 +37,6 @@ class LightsOutGame: NSObject {
     
     func toggleCross(row r: Int, column c: Int){
         let currentValueOfSquare = squareAt(row: r, column: c)
-        moveList.append(r, c)
         setSquareAt(row: r, column: c, value: !currentValueOfSquare)
         if r > 0 {
             toggleSquareAt(row: r-1, column: c)
@@ -53,17 +52,18 @@ class LightsOutGame: NSObject {
         }
     }
     
-    func clearlistOfSquares () {
+    func clearBoard () {
         for rowNum in 0..<boardSize {
             for colNum in 0..<boardSize {
                 setSquareAt(row: rowNum, column: colNum, value: false)
             }
         }
-        
     }
     
     func newGame() {
-        clearlistOfSquares()
+        var listOfSquares = [(Int, Int)]()
+        
+        clearBoard()
         
         // choosing random squares to toggle
         for rowNum in 0..<boardSize {
@@ -72,30 +72,25 @@ class LightsOutGame: NSObject {
             }
         }
         
+        originalLayout.removeAll()
+        
         // toggling squares
         for _ in 0..<level {
             let randomElement = random() % listOfSquares.count
             let (row, col) = listOfSquares[randomElement]
             listOfSquares.removeAtIndex(randomElement)
+            originalLayout.append((row, col))
             toggleCross(row: row, column: col)
         }
-        moveList.removeAll()
-
     }
     
     func undoRound() {
-        var listCount = 0
         
-        for _ in moveList {
-            let (r, c) = moveList[listCount]
+        clearBoard()
+        
+        for (r, c) in originalLayout {
             toggleCross(row: r, column: c)
-            
-            if listCount < moveList.count {
-                listCount += 1
-            }
         }
-        moveList.removeAll()
-        listCount = 0
     }
     
     func makeMove(row r: Int, column c: Int) {

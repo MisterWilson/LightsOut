@@ -18,19 +18,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lightsOutView: LightsOutView!
     
-    @IBAction func levelSliderChanged(sender: AnyObject) {
+    @IBAction func levelSliderChanged(_: AnyObject) {
         levelSlider.continuous = false
         let levelFromSlider = self.levelSlider.value
         self.levelButton.setTitle(String(Int(levelFromSlider)), forState: UIControlState.Normal)
         let store = NSUserDefaults.standardUserDefaults()
         let value = Int(levelFromSlider)
         store.setInteger(value, forKey: "Level")
-        resetLevel("AnyObject")
+        resetLevel()
     }
     
-    @IBAction func showHideSlider(sender: AnyObject) {
-        showHideSlide()
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "showHideSlide", userInfo: nil, repeats: false)
+    @IBAction func showHideSlider(_: AnyObject) {
+        UIView.animateWithDuration(1.0, animations: {
+            self.levelSlider.alpha = self.levelSlider.hidden ? 1.0 : 0.0
+        }, completion: {
+            (_: Bool) in
+            self.levelSlider.hidden = !self.levelSlider.hidden
+        })
     }
     
     @IBAction func newGameClick(_: AnyObject) {
@@ -42,7 +46,7 @@ class ViewController: UIViewController {
         lightsOutView.setNeedsDisplay()
     }
     
-    @IBAction func undoRoundClick(sender: AnyObject) {
+    @IBAction func undoRoundClick(_: AnyObject) {
         game.undoRound()
         lightsOutView.setNeedsDisplay()
     }
@@ -57,7 +61,7 @@ class ViewController: UIViewController {
         self.levelSlider.value = Float(level)
         
         self.levelButton.setTitle(String(Int(level)), forState: UIControlState.Normal)
-        self.resetLevel(self)
+        self.resetLevel()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didWinGame", name: "didWinGame", object: nil  )
         
@@ -71,19 +75,14 @@ class ViewController: UIViewController {
     func didWinGame() {
         self.levelSlider.value += 1
         self.levelSliderChanged(self)
-        self.resetLevel(self)
+        self.resetLevel()
     }
     
-    func resetLevel(_: AnyObject) {
+    func resetLevel() {
         let levelFromSlider = self.levelSlider.value
         game.level = Int(levelFromSlider)
         game.newGame()
         lightsOutView.setNeedsDisplay()
     }
-    
-    func showHideSlide() {
-        levelSlider.hidden = !levelSlider.hidden
-    }
-
 }
 

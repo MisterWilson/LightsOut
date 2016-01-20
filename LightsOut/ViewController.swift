@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var lightsOutView: LightsOutView!
     
     @IBAction func levelSliderChanged(_: AnyObject) {
-        levelSlider.continuous = false
+//        levelSlider.continuous = false
         let levelFromSlider = self.levelSlider.value
         self.levelButton.setTitle(String(Int(levelFromSlider)), forState: UIControlState.Normal)
         let store = NSUserDefaults.standardUserDefaults()
@@ -29,12 +29,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showHideSlider(_: AnyObject) {
-        UIView.animateWithDuration(1.0, animations: {
-            self.levelSlider.alpha = self.levelSlider.hidden ? 1.0 : 0.0
-        }, completion: {
-            (_: Bool) in
-            self.levelSlider.hidden = !self.levelSlider.hidden
-        })
+
+        if levelSlider.hidden == false {
+            UIView.animateWithDuration(1.0, animations: {
+                self.levelSlider.alpha = self.levelSlider.hidden ? 1.0 : 0.0
+                }, completion: {
+                    (_: Bool) in
+                    self.levelSlider.hidden = !self.levelSlider.hidden
+                    self.levelSlider.alpha = 1.0
+            })
+        } else {
+            levelSlider.hidden = !levelSlider.hidden
+        }
     }
     
     @IBAction func newGameClick(_: AnyObject) {

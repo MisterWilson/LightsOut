@@ -15,6 +15,7 @@
 		8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B71B855BE00016739B /* LaunchScreen.xib */; };
 		8E4CD5C51B855BE00016739B /* LightsOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5C41B855BE00016739B /* LightsOutTests.swift */; };
 		8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */; };
+		8E5C35511C572F1E00C9C40F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5C35501C572F1E00C9C40F /* AVFoundation.framework */; };
 		8E73A0231C5712B000DB2FD5 /* LOZ_Arrow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */; };
 		8E73A0241C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */; };
 		8E73A0251C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */; };
@@ -68,6 +69,7 @@
 		8E4CD5C31B855BE00016739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4CD5C41B855BE00016739B /* LightsOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutTests.swift; sourceTree = "<group>"; };
 		8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
+		8E5C35501C572F1E00C9C40F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Arrow.wav; sourceTree = "<group>"; };
 		8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Blow.wav; sourceTree = "<group>"; };
 		8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Drop.wav; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		8E73A01B1C5712B000DB2FD5 /* LOZ_Secret.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Secret.wav; sourceTree = "<group>"; };
 		8E73A01C1C5712B000DB2FD5 /* LOZ_Shield.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Shield.wav; sourceTree = "<group>"; };
 		8E73A01D1C5712B000DB2FD5 /* LOZ_Stairs.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Stairs.wav; sourceTree = "<group>"; };
-		8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Sword.wav; sourceTree = "<group>"; };
+		8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = LOZ_Sword.wav; path = LightsOutTests/LOZ/LOZ_Sword.wav; sourceTree = SOURCE_ROOT; };
 		8E73A01F1C5712B000DB2FD5 /* LOZ_Sword_Combined.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Sword_Combined.wav; sourceTree = "<group>"; };
 		8E73A0201C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Sword_Shoot.wav; sourceTree = "<group>"; };
 		8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Text.wav; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E5C35511C572F1E00C9C40F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,7 @@
 		8E4CD5A01B855BE00016739B = {
 			isa = PBXGroup;
 			children = (
+				8E5C35501C572F1E00C9C40F /* AVFoundation.framework */,
 				8E4CD5AB1B855BE00016739B /* LightsOut */,
 				8E4CD5C11B855BE00016739B /* LightsOutTests */,
 				8E4CD5AA1B855BE00016739B /* Products */,
@@ -155,6 +159,7 @@
 		8E4CD5AC1B855BE00016739B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E73A0071C5712B000DB2FD5 /* LOZ */,
 				8E4CD5AD1B855BE00016739B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -172,7 +177,6 @@
 		8E4CD5C21B855BE00016739B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8E73A0071C5712B000DB2FD5 /* LOZ */,
 				8E4CD5C31B855BE00016739B /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -209,8 +213,9 @@
 				8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */,
 				8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */,
 			);
-			path = LOZ;
-			sourceTree = "<group>";
+			name = LOZ;
+			path = LightsOutTests/LOZ;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 

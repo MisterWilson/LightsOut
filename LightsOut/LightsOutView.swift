@@ -7,50 +7,13 @@
 //
 
 import UIKit
-import AVFoundation
 
 let boardSize = 5
-var audioPlayer = AVAudioPlayer()
-
 
 class LightsOutView: UIView {
     
     var game: LightsOutGame?
-    
-    func moveSound() {
-        let sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("LOZ_Sword", ofType: "wav")!)
-        let _: NSError?
-        
-        
-        do
-        {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-        }
-        catch
-        {
-            print(error)
-        }
-        
-        do
-        {
-            try AVAudioSession.sharedInstance().setActive(true)
-        }
-        catch
-        {
-            print(error)
-        }
-        
-        do
-        {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: sound)
-        }
-        catch
-        {
-            print(error)
-        }
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
-    }
+
     
     func placeTouch(x: CGFloat, _ y: CGFloat) -> (row: Int, column: Int) {
         let bounds = self.bounds
@@ -65,9 +28,7 @@ class LightsOutView: UIView {
         
         let columnAsInt = Int(floor(column))
         let rowAsInt = Int(floor(row))
-        
-        moveSound()
-        
+                
         return (row: rowAsInt, column: columnAsInt)
     }
 

@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var game = LightsOutGame()
     var fadeOutTimer: NSTimer?
     var level = 1
+    
+    var moveSoundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("LOZ_Sword", ofType: "wav")!)
+    var audioPlayer = AVAudioPlayer()
+    
+//    audioPlayer = AVAudioPlayer(contentsOfURL: moveSoundURL)
+
     
     @IBOutlet weak var levelButton: UIButton!
     
@@ -75,8 +82,6 @@ class ViewController: UIViewController {
         self.resetLevel()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "didWinGame", name: "didWinGame", object: nil  )
-        
-//        self.setNeedsStatusBarAppearanceUpdate()
     }
 
     override func didReceiveMemoryWarning() {

@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LightsOutGame: NSObject {
     
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
     var level = 1
     var originalLayout = [(Int, Int)]()
+    var audioPlayer = AVAudioPlayer()
+    
+    func moveSound() {
+        var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("LOZ_Sword", ofType: "wav")!)
+        
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions: AVAudioSessionCategoryOptions.DefaultToSpeaker)
+        AVAudioSession.sharedInstance().setActive(true, withOptions: nil)
+        
+        var error: NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: sound)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+    }
     
     func didWinGame() -> Bool {
         for i in squares {

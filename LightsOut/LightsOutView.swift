@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 let boardSize = 5
 
 class LightsOutView: UIView {
     
     var game: LightsOutGame?
-//    var lightShowStarted = false
-//    var lightShowCount = 10
     
     func placeTouch(x: CGFloat, _ y: CGFloat) -> (row: Int, column: Int) {
         let bounds = self.bounds
@@ -49,9 +48,7 @@ class LightsOutView: UIView {
     func randomCGFloat() -> CGFloat {
         return CGFloat(random() % 10000)/10000.0
     }
-    
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
+
     override func drawRect(rect: CGRect) {
         
         if let g = game {
@@ -73,35 +70,15 @@ class LightsOutView: UIView {
                     gridColor.set()
                     path.stroke()
                     
-//                    if lightShowStarted {
-//                        let randomColor = UIColor(red: randomCGFloat(), green: randomCGFloat(), blue: randomCGFloat(), alpha: 1)
-//                        randomColor.set()
-//                    } else {
                         if g.squareAt(row:rowNum, column:colNum) == true {
                             litColor.set()
                         } else {
                             unlitColor.set()
                         }
-//                    }
                     
                     path.fill()
                 }
             }
         }
     }
-
-//    func startLightShow() {
-//        lightShowStarted = true
-//        lightShowCount = 1
-//        self.setNeedsDisplay()
-//        NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "changeColors", userInfo: nil, repeats: false)
-//    }
-//    
-//    func changeColors() {
-//        self.setNeedsDisplay()
-//        lightShowCount--
-//        if lightShowCount > 0 {
-//            NSTimer.scheduledTimerWithTimeInterval(0.2, target: self, selector: "changeColors", userInfo: nil, repeats: false)
-//        }
-//    }
 }

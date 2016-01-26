@@ -48,17 +48,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func fadeOut() {
-        
-        UIView.animateWithDuration(1.0, animations: {
-            self.levelSlider.alpha = 0.0
-            }, completion: {
-                (_: Bool) in
-                self.levelSlider.hidden = true
-                self.levelSlider.alpha = 1.0
-        })
-    }
-    
     @IBAction func newGameClick(_: AnyObject) {
         self.levelSlider.value -= 1
         self.levelSliderChanged(self)
@@ -94,6 +83,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     func didWinGame() {
         self.levelSlider.value += 1
         self.levelSliderChanged(self)
@@ -106,5 +96,17 @@ class ViewController: UIViewController {
         game.newGame()
         lightsOutView.setNeedsDisplay()
     }
+    
+    func fadeOut() {
+        
+        UIView.animateWithDuration(1.0, animations: {
+            self.levelSlider.alpha = 0.0
+            }, completion: {
+                (_: Bool) in
+                self.levelSlider.hidden = true
+                self.levelSlider.alpha = 1.0
+        })
+    }
+
 }
 

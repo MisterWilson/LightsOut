@@ -9,10 +9,10 @@
 import UIKit
 
 class LightsOutGame: NSObject {
+    
     var squares = [Bool](count:boardSize * boardSize, repeatedValue:false)
     var level = 1
     var originalLayout = [(Int, Int)]()
-
     
     func didWinGame() -> Bool {
         for i in squares {
@@ -94,6 +94,7 @@ class LightsOutGame: NSObject {
     }
     
     func makeMove(row r: Int, column c: Int) {
+        
         toggleCross(row: r, column: c)
         
         if self.didWinGame() {

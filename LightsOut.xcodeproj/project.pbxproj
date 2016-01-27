@@ -44,6 +44,33 @@
 		8E73A03C1C5712B000DB2FD5 /* LOZ_Text.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */; };
 		8E73A03D1C5712B000DB2FD5 /* LOZ_Unlock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */; };
 		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; };
+		8ED0D5791C5905A30079B86E /* LOZ_Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */; };
+		8ED0D57A1C5905A30079B86E /* LOZ_Arrow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */; };
+		8ED0D57B1C5905A30079B86E /* LOZ_Bomb_Blow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */; };
+		8ED0D57C1C5905A30079B86E /* LOZ_Bomb_Drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */; };
+		8ED0D57D1C5905A30079B86E /* LOZ_Boomerang.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00B1C5712B000DB2FD5 /* LOZ_Boomerang.wav */; };
+		8ED0D57E1C5905A30079B86E /* LOZ_Boss_Scream1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00C1C5712B000DB2FD5 /* LOZ_Boss_Scream1.wav */; };
+		8ED0D57F1C5905A30079B86E /* LOZ_Boss_Scream2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00D1C5712B000DB2FD5 /* LOZ_Boss_Scream2.wav */; };
+		8ED0D5801C5905A30079B86E /* LOZ_Candle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00E1C5712B000DB2FD5 /* LOZ_Candle.wav */; };
+		8ED0D5811C5905A30079B86E /* LOZ_Die.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00F1C5712B000DB2FD5 /* LOZ_Die.wav */; };
+		8ED0D5821C5905A30079B86E /* LOZ_Fanfare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0101C5712B000DB2FD5 /* LOZ_Fanfare.wav */; };
+		8ED0D5831C5905A30079B86E /* LOZ_Get_Heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0111C5712B000DB2FD5 /* LOZ_Get_Heart.wav */; };
+		8ED0D5841C5905A30079B86E /* LOZ_Get_Item.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0121C5712B000DB2FD5 /* LOZ_Get_Item.wav */; };
+		8ED0D5851C5905A30079B86E /* LOZ_Get_Rupee.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0131C5712B000DB2FD5 /* LOZ_Get_Rupee.wav */; };
+		8ED0D5861C5905A30079B86E /* LOZ_Hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0141C5712B000DB2FD5 /* LOZ_Hit.wav */; };
+		8ED0D5871C5905A30079B86E /* LOZ_Hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0151C5712B000DB2FD5 /* LOZ_Hurt.wav */; };
+		8ED0D5881C5905A30079B86E /* LOZ_Key.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0161C5712B000DB2FD5 /* LOZ_Key.wav */; };
+		8ED0D5891C5905A30079B86E /* LOZ_Kill.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0171C5712B000DB2FD5 /* LOZ_Kill.wav */; };
+		8ED0D58A1C5905A30079B86E /* LOZ_LowHealth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0181C5712B000DB2FD5 /* LOZ_LowHealth.wav */; };
+		8ED0D58B1C5905A30079B86E /* LOZ_MagicalRod.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0191C5712B000DB2FD5 /* LOZ_MagicalRod.wav */; };
+		8ED0D58C1C5905A30079B86E /* LOZ_Recorder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01A1C5712B000DB2FD5 /* LOZ_Recorder.wav */; };
+		8ED0D58D1C5905A30079B86E /* LOZ_Secret.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01B1C5712B000DB2FD5 /* LOZ_Secret.wav */; };
+		8ED0D58E1C5905A30079B86E /* LOZ_Shield.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01C1C5712B000DB2FD5 /* LOZ_Shield.wav */; };
+		8ED0D58F1C5905A30079B86E /* LOZ_Stairs.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01D1C5712B000DB2FD5 /* LOZ_Stairs.wav */; };
+		8ED0D5901C5905A30079B86E /* LOZ_Sword_Combined.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01F1C5712B000DB2FD5 /* LOZ_Sword_Combined.wav */; };
+		8ED0D5911C5905A30079B86E /* LOZ_Sword_Shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0201C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav */; };
+		8ED0D5921C5905A30079B86E /* LOZ_Text.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */; };
+		8ED0D5931C5905A30079B86E /* LOZ_Unlock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,9 +331,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED0D58B1C5905A30079B86E /* LOZ_MagicalRod.wav in Resources */,
+				8ED0D5881C5905A30079B86E /* LOZ_Key.wav in Resources */,
+				8ED0D57A1C5905A30079B86E /* LOZ_Arrow.wav in Resources */,
+				8ED0D5921C5905A30079B86E /* LOZ_Text.wav in Resources */,
+				8ED0D58D1C5905A30079B86E /* LOZ_Secret.wav in Resources */,
+				8ED0D57D1C5905A30079B86E /* LOZ_Boomerang.wav in Resources */,
+				8ED0D5821C5905A30079B86E /* LOZ_Fanfare.wav in Resources */,
 				8E4CD5B41B855BE00016739B /* Main.storyboard in Resources */,
+				8ED0D58C1C5905A30079B86E /* LOZ_Recorder.wav in Resources */,
+				8ED0D5891C5905A30079B86E /* LOZ_Kill.wav in Resources */,
+				8ED0D5901C5905A30079B86E /* LOZ_Sword_Combined.wav in Resources */,
+				8ED0D57F1C5905A30079B86E /* LOZ_Boss_Scream2.wav in Resources */,
+				8ED0D57B1C5905A30079B86E /* LOZ_Bomb_Blow.wav in Resources */,
+				8ED0D5811C5905A30079B86E /* LOZ_Die.wav in Resources */,
+				8ED0D5801C5905A30079B86E /* LOZ_Candle.wav in Resources */,
+				8ED0D58E1C5905A30079B86E /* LOZ_Shield.wav in Resources */,
+				8ED0D5931C5905A30079B86E /* LOZ_Unlock.wav in Resources */,
+				8ED0D57E1C5905A30079B86E /* LOZ_Boss_Scream1.wav in Resources */,
+				8ED0D5791C5905A30079B86E /* LOZ_Sword.wav in Resources */,
+				8ED0D5861C5905A30079B86E /* LOZ_Hit.wav in Resources */,
+				8ED0D5871C5905A30079B86E /* LOZ_Hurt.wav in Resources */,
+				8ED0D5911C5905A30079B86E /* LOZ_Sword_Shoot.wav in Resources */,
 				8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */,
+				8ED0D57C1C5905A30079B86E /* LOZ_Bomb_Drop.wav in Resources */,
 				8E1D08261BFC09CF0002322F /* To-Do.txt in Resources */,
+				8ED0D5831C5905A30079B86E /* LOZ_Get_Heart.wav in Resources */,
+				8ED0D5841C5905A30079B86E /* LOZ_Get_Item.wav in Resources */,
+				8ED0D58A1C5905A30079B86E /* LOZ_LowHealth.wav in Resources */,
+				8ED0D5851C5905A30079B86E /* LOZ_Get_Rupee.wav in Resources */,
+				8ED0D58F1C5905A30079B86E /* LOZ_Stairs.wav in Resources */,
 				8E4CD5B61B855BE00016739B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

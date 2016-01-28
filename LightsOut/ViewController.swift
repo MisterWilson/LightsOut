@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         self.levelSlider.value += 1
         self.levelSliderChanged(self)
         self.resetLevel()
-        wonRoundSound?.play()
+        audioPlayer?.play()
     }
     
     func resetLevel() {

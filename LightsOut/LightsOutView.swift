@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 let boardSize = 5
 
 class LightsOutView: UIView {
     
     var game: LightsOutGame?
-
+    var tapSound: AVAudioPlayer?
+    
+    override func awakeFromNib() {
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("LOZ_Sword", ofType: "wav")!
+        let url = NSURL(fileURLWithPath: path)
+        
+        do {
+            try tapSound = AVAudioPlayer(contentsOfURL: url)
+        } catch {
+            print("Sorry sucka")
+        }
+    }
     
     func placeTouch(x: CGFloat, _ y: CGFloat) -> (row: Int, column: Int) {
         let bounds = self.bounds
@@ -43,6 +56,8 @@ class LightsOutView: UIView {
                 self.setNeedsDisplay()
             }
         }
+        tapSound?.play()
+
     }
 
     func randomCGFloat() -> CGFloat {

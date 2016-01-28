@@ -14,12 +14,8 @@ class ViewController: UIViewController {
     var game = LightsOutGame()
     var fadeOutTimer: NSTimer?
     var level = 1
-    
-    var moveSoundURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("LOZ_Sword", ofType: "wav")!)
-    var audioPlayer = AVAudioPlayer()
-    
-//    audioPlayer = AVAudioPlayer(contentsOfURL: moveSoundURL)
-
+    var audioPlayer: AVAudioPlayer?
+    var wonRoundSound: AVAudioPlayer?
     
     @IBOutlet weak var levelButton: UIButton!
     
@@ -62,6 +58,7 @@ class ViewController: UIViewController {
         game.level = Int(levelFromSlider)
         game.newGame()
         lightsOutView.setNeedsDisplay()
+        audioPlayer?.play()
     }
     
     @IBAction func undoRoundClick(_: AnyObject) {
@@ -71,6 +68,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bundle = NSBundle.mainBundle()
+        let moveSoundPath = bundle.pathForResource("LOZ_Sword_Combined", ofType: "wav")!
+        let moveSoundURL = NSURL(fileURLWithPath: moveSoundPath)
+        
+        do {
+            try audioPlayer = AVAudioPlayer(contentsOfURL: moveSoundURL)
+        } catch {
+            print("Sorry sucka")
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
         lightsOutView.game = game
         let store = NSUserDefaults.standardUserDefaults()
@@ -93,6 +100,7 @@ class ViewController: UIViewController {
         self.levelSlider.value += 1
         self.levelSliderChanged(self)
         self.resetLevel()
+        wonRoundSound?.play()
     }
     
     func resetLevel() {

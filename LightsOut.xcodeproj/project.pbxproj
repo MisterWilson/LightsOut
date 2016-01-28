@@ -15,34 +15,6 @@
 		8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B71B855BE00016739B /* LaunchScreen.xib */; };
 		8E4CD5C51B855BE00016739B /* LightsOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5C41B855BE00016739B /* LightsOutTests.swift */; };
 		8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */; };
-		8E5C35511C572F1E00C9C40F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5C35501C572F1E00C9C40F /* AVFoundation.framework */; };
-		8E73A0231C5712B000DB2FD5 /* LOZ_Arrow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */; };
-		8E73A0241C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */; };
-		8E73A0251C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */; };
-		8E73A0261C5712B000DB2FD5 /* LOZ_Boomerang.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00B1C5712B000DB2FD5 /* LOZ_Boomerang.wav */; };
-		8E73A0271C5712B000DB2FD5 /* LOZ_Boss_Scream1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00C1C5712B000DB2FD5 /* LOZ_Boss_Scream1.wav */; };
-		8E73A0281C5712B000DB2FD5 /* LOZ_Boss_Scream2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00D1C5712B000DB2FD5 /* LOZ_Boss_Scream2.wav */; };
-		8E73A0291C5712B000DB2FD5 /* LOZ_Candle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00E1C5712B000DB2FD5 /* LOZ_Candle.wav */; };
-		8E73A02A1C5712B000DB2FD5 /* LOZ_Die.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A00F1C5712B000DB2FD5 /* LOZ_Die.wav */; };
-		8E73A02B1C5712B000DB2FD5 /* LOZ_Fanfare.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0101C5712B000DB2FD5 /* LOZ_Fanfare.wav */; };
-		8E73A02C1C5712B000DB2FD5 /* LOZ_Get_Heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0111C5712B000DB2FD5 /* LOZ_Get_Heart.wav */; };
-		8E73A02D1C5712B000DB2FD5 /* LOZ_Get_Item.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0121C5712B000DB2FD5 /* LOZ_Get_Item.wav */; };
-		8E73A02E1C5712B000DB2FD5 /* LOZ_Get_Rupee.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0131C5712B000DB2FD5 /* LOZ_Get_Rupee.wav */; };
-		8E73A02F1C5712B000DB2FD5 /* LOZ_Hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0141C5712B000DB2FD5 /* LOZ_Hit.wav */; };
-		8E73A0301C5712B000DB2FD5 /* LOZ_Hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0151C5712B000DB2FD5 /* LOZ_Hurt.wav */; };
-		8E73A0311C5712B000DB2FD5 /* LOZ_Key.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0161C5712B000DB2FD5 /* LOZ_Key.wav */; };
-		8E73A0321C5712B000DB2FD5 /* LOZ_Kill.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0171C5712B000DB2FD5 /* LOZ_Kill.wav */; };
-		8E73A0331C5712B000DB2FD5 /* LOZ_LowHealth.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0181C5712B000DB2FD5 /* LOZ_LowHealth.wav */; };
-		8E73A0341C5712B000DB2FD5 /* LOZ_MagicalRod.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0191C5712B000DB2FD5 /* LOZ_MagicalRod.wav */; };
-		8E73A0351C5712B000DB2FD5 /* LOZ_Recorder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01A1C5712B000DB2FD5 /* LOZ_Recorder.wav */; };
-		8E73A0361C5712B000DB2FD5 /* LOZ_Secret.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01B1C5712B000DB2FD5 /* LOZ_Secret.wav */; };
-		8E73A0371C5712B000DB2FD5 /* LOZ_Shield.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01C1C5712B000DB2FD5 /* LOZ_Shield.wav */; };
-		8E73A0381C5712B000DB2FD5 /* LOZ_Stairs.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01D1C5712B000DB2FD5 /* LOZ_Stairs.wav */; };
-		8E73A0391C5712B000DB2FD5 /* LOZ_Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */; };
-		8E73A03A1C5712B000DB2FD5 /* LOZ_Sword_Combined.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01F1C5712B000DB2FD5 /* LOZ_Sword_Combined.wav */; };
-		8E73A03B1C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0201C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav */; };
-		8E73A03C1C5712B000DB2FD5 /* LOZ_Text.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */; };
-		8E73A03D1C5712B000DB2FD5 /* LOZ_Unlock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */; };
 		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; };
 		8ED0D5791C5905A30079B86E /* LOZ_Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */; };
 		8ED0D57A1C5905A30079B86E /* LOZ_Arrow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */; };
@@ -71,6 +43,7 @@
 		8ED0D5911C5905A30079B86E /* LOZ_Sword_Shoot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0201C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav */; };
 		8ED0D5921C5905A30079B86E /* LOZ_Text.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0211C5712B000DB2FD5 /* LOZ_Text.wav */; };
 		8ED0D5931C5905A30079B86E /* LOZ_Unlock.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */; };
+		8EF2689A1C59B67E00F193C4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF268991C59B67E00F193C4 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +69,6 @@
 		8E4CD5C31B855BE00016739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4CD5C41B855BE00016739B /* LightsOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutTests.swift; sourceTree = "<group>"; };
 		8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
-		8E5C35501C572F1E00C9C40F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Arrow.wav; sourceTree = "<group>"; };
 		8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Blow.wav; sourceTree = "<group>"; };
 		8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Drop.wav; sourceTree = "<group>"; };
@@ -126,6 +98,7 @@
 		8E73A0221C5712B000DB2FD5 /* LOZ_Unlock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Unlock.wav; sourceTree = "<group>"; };
 		8E8105271BCDE80A00319B89 /* LightsOutGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutGame.swift; sourceTree = "<group>"; };
 		8EBE44271C28E5C6008A4836 /* LightsOut.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LightsOut.entitlements; sourceTree = "<group>"; };
+		8EF268991C59B67E00F193C4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5C35511C572F1E00C9C40F /* AVFoundation.framework in Frameworks */,
+				8EF2689A1C59B67E00F193C4 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,10 +123,10 @@
 		8E4CD5A01B855BE00016739B = {
 			isa = PBXGroup;
 			children = (
-				8E5C35501C572F1E00C9C40F /* AVFoundation.framework */,
 				8E4CD5AB1B855BE00016739B /* LightsOut */,
 				8E4CD5C11B855BE00016739B /* LightsOutTests */,
 				8E4CD5AA1B855BE00016739B /* Products */,
+				8EF268991C59B67E00F193C4 /* AVFoundation.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -369,33 +342,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E73A0241C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav in Resources */,
-				8E73A0391C5712B000DB2FD5 /* LOZ_Sword.wav in Resources */,
-				8E73A0301C5712B000DB2FD5 /* LOZ_Hurt.wav in Resources */,
-				8E73A0331C5712B000DB2FD5 /* LOZ_LowHealth.wav in Resources */,
-				8E73A0281C5712B000DB2FD5 /* LOZ_Boss_Scream2.wav in Resources */,
-				8E73A0251C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav in Resources */,
-				8E73A02B1C5712B000DB2FD5 /* LOZ_Fanfare.wav in Resources */,
-				8E73A03C1C5712B000DB2FD5 /* LOZ_Text.wav in Resources */,
-				8E73A0231C5712B000DB2FD5 /* LOZ_Arrow.wav in Resources */,
-				8E73A0341C5712B000DB2FD5 /* LOZ_MagicalRod.wav in Resources */,
-				8E73A0361C5712B000DB2FD5 /* LOZ_Secret.wav in Resources */,
-				8E73A03B1C5712B000DB2FD5 /* LOZ_Sword_Shoot.wav in Resources */,
-				8E73A0371C5712B000DB2FD5 /* LOZ_Shield.wav in Resources */,
-				8E73A0261C5712B000DB2FD5 /* LOZ_Boomerang.wav in Resources */,
-				8E73A02A1C5712B000DB2FD5 /* LOZ_Die.wav in Resources */,
-				8E73A0381C5712B000DB2FD5 /* LOZ_Stairs.wav in Resources */,
-				8E73A0321C5712B000DB2FD5 /* LOZ_Kill.wav in Resources */,
-				8E73A02F1C5712B000DB2FD5 /* LOZ_Hit.wav in Resources */,
-				8E73A0271C5712B000DB2FD5 /* LOZ_Boss_Scream1.wav in Resources */,
-				8E73A0311C5712B000DB2FD5 /* LOZ_Key.wav in Resources */,
-				8E73A0351C5712B000DB2FD5 /* LOZ_Recorder.wav in Resources */,
-				8E73A02D1C5712B000DB2FD5 /* LOZ_Get_Item.wav in Resources */,
-				8E73A02E1C5712B000DB2FD5 /* LOZ_Get_Rupee.wav in Resources */,
-				8E73A03A1C5712B000DB2FD5 /* LOZ_Sword_Combined.wav in Resources */,
-				8E73A02C1C5712B000DB2FD5 /* LOZ_Get_Heart.wav in Resources */,
-				8E73A03D1C5712B000DB2FD5 /* LOZ_Unlock.wav in Resources */,
-				8E73A0291C5712B000DB2FD5 /* LOZ_Candle.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class LightsOutView: UIView {
     
     override func awakeFromNib() {
         let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("LOZ_Sword", ofType: "wav")!
+        let path = bundle.pathForResource("LOZ_Text", ofType: "wav")!
         let url = NSURL(fileURLWithPath: path)
         
         do {

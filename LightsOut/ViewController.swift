@@ -69,7 +69,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let bundle = NSBundle.mainBundle()
-        let moveSoundPath = bundle.pathForResource("LOZ_Sword_Combined", ofType: "wav")!
+        let moveSoundPath = bundle.pathForResource("LOZ_Bomb_Drop", ofType: "wav")!
         let moveSoundURL = NSURL(fileURLWithPath: moveSoundPath)
         
         do {

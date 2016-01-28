@@ -14,8 +14,11 @@ class ViewController: UIViewController {
     var game = LightsOutGame()
     var fadeOutTimer: NSTimer?
     var level = 1
-    var audioPlayer: AVAudioPlayer?
-    var wonRoundSound: AVAudioPlayer?
+    
+    var wonSound: AVAudioPlayer?
+    var newSound: AVAudioPlayer?
+    var undoSound: AVAudioPlayer?
+    var secretSound: AVAudioPlayer?
     
     @IBOutlet weak var levelButton: UIButton!
     
@@ -47,6 +50,7 @@ class ViewController: UIViewController {
             fadeOut()
         } else {
             levelSlider.hidden = false // make slider visible
+            secretSound?.play()
             fadeOutTimer = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "fadeOut", userInfo: nil, repeats: false)
         }
     }
@@ -58,25 +62,59 @@ class ViewController: UIViewController {
         game.level = Int(levelFromSlider)
         game.newGame()
         lightsOutView.setNeedsDisplay()
-        audioPlayer?.play()
+        newSound?.play()
     }
     
     @IBAction func undoRoundClick(_: AnyObject) {
         game.undoRound()
         lightsOutView.setNeedsDisplay()
+        undoSound?.play()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let bundle = NSBundle.mainBundle()
-        let moveSoundPath = bundle.pathForResource("LOZ_Bomb_Drop", ofType: "wav")!
-        let moveSoundURL = NSURL(fileURLWithPath: moveSoundPath)
         
+        
+        
+        let newbundle = NSBundle.mainBundle()
+        let newSoundPath = newbundle.pathForResource("LOZ_Get_Rupee", ofType: "wav")!
+        let newSoundURL = NSURL(fileURLWithPath: newSoundPath)
+    
         do {
-            try audioPlayer = AVAudioPlayer(contentsOfURL: moveSoundURL)
+            try newSound = AVAudioPlayer(contentsOfURL: newSoundURL)
         } catch {
             print("Sorry sucka")
         }
+        
+        let wonbundle = NSBundle.mainBundle()
+        let wonSoundPath = wonbundle.pathForResource("LOZ_Get_Item", ofType: "wav")!
+        let wonSoundURL = NSURL(fileURLWithPath: wonSoundPath)
+        
+        do {
+            try wonSound = AVAudioPlayer(contentsOfURL: wonSoundURL)
+        } catch {
+            print("Sorry sucka")
+        }
+        let undobundle = NSBundle.mainBundle()
+        let undoSoundPath = undobundle.pathForResource("LOZ_Hurt", ofType: "wav")!
+        let undoSoundURL = NSURL(fileURLWithPath: undoSoundPath)
+        do {
+            try undoSound = AVAudioPlayer(contentsOfURL: undoSoundURL)
+        } catch {
+            print("Sorry sucka")
+        }
+        
+        let secretbundle = NSBundle.mainBundle()
+        let secretSoundPath = secretbundle.pathForResource("LOZ_Secret", ofType: "wav")!
+        let secretSoundURL = NSURL(fileURLWithPath: secretSoundPath)
+        
+        do {
+            try secretSound = AVAudioPlayer(contentsOfURL: secretSoundURL)
+        } catch {
+            print("Sorry sucka")
+        }
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
         lightsOutView.game = game
@@ -100,7 +138,7 @@ class ViewController: UIViewController {
         self.levelSlider.value += 1
         self.levelSliderChanged(self)
         self.resetLevel()
-        audioPlayer?.play()
+        wonSound?.play()
     }
     
     func resetLevel() {

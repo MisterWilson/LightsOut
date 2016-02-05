@@ -1,15 +1,4 @@
-Fade out slider to hide after use
-
-Change new games to show level 1 at start (currently at 0)
-
-
-
-
 Record level time
-
-Allow horizontal use
-
-Add "undu" button that resets level.
 
 Needs introduction/explaination of WTF they're doing
 

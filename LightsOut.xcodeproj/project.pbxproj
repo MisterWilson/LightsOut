@@ -15,6 +15,7 @@
 		8E4CD5B91B855BE00016739B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CD5B71B855BE00016739B /* LaunchScreen.xib */; };
 		8E4CD5C51B855BE00016739B /* LightsOutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5C41B855BE00016739B /* LightsOutTests.swift */; };
 		8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */; };
+		8E545AA21C6441AC00E0FB35 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E545AA11C6441AC00E0FB35 /* MenuViewController.swift */; };
 		8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8105271BCDE80A00319B89 /* LightsOutGame.swift */; };
 		8ED0D5791C5905A30079B86E /* LOZ_Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A01E1C5712B000DB2FD5 /* LOZ_Sword.wav */; };
 		8ED0D57A1C5905A30079B86E /* LOZ_Arrow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */; };
@@ -69,6 +70,7 @@
 		8E4CD5C31B855BE00016739B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E4CD5C41B855BE00016739B /* LightsOutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsOutTests.swift; sourceTree = "<group>"; };
 		8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsOutView.swift; sourceTree = "<group>"; };
+		8E545AA11C6441AC00E0FB35 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8E73A0081C5712B000DB2FD5 /* LOZ_Arrow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Arrow.wav; sourceTree = "<group>"; };
 		8E73A0091C5712B000DB2FD5 /* LOZ_Bomb_Blow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Blow.wav; sourceTree = "<group>"; };
 		8E73A00A1C5712B000DB2FD5 /* LOZ_Bomb_Drop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LOZ_Bomb_Drop.wav; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				8EBE44271C28E5C6008A4836 /* LightsOut.entitlements */,
 				8E4CD5AE1B855BE00016739B /* AppDelegate.swift */,
 				8E4CD5B01B855BE00016739B /* ViewController.swift */,
+				8E545AA11C6441AC00E0FB35 /* MenuViewController.swift */,
 				8E4CD5B21B855BE00016739B /* Main.storyboard */,
 				8E8105271BCDE80A00319B89 /* LightsOutGame.swift */,
 				8E4CD5CE1B855CDA0016739B /* LightsOutView.swift */,
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4CD5B11B855BE00016739B /* ViewController.swift in Sources */,
+				8E545AA21C6441AC00E0FB35 /* MenuViewController.swift in Sources */,
 				8E4CD5CF1B855CDA0016739B /* LightsOutView.swift in Sources */,
 				8E4CD5AF1B855BE00016739B /* AppDelegate.swift in Sources */,
 				8E8105281BCDE80A00319B89 /* LightsOutGame.swift in Sources */,
